@@ -2,4 +2,6 @@ pandas
 numpy 
 seaborn
 matplotlib
+pymysql
+python-dotenv
 -e .
