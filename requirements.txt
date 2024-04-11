@@ -5,4 +5,7 @@ matplotlib
 pymysql
 python-dotenv
 scikit-learn
+xgboost
+catboost
+MLflow==2.11.3
 -e .

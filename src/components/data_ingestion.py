@@ -22,7 +22,9 @@ class DataIngestion:
             #Reading data from database
             logging.info("Reading data from database")
             os.makedirs(os.path.dirname(self.Ingestion_data_config.train_data_path),exist_ok=True)
-            df=Read_SQL_Data()
+            # df=Read_SQL_Data()
+            df=pd.read_csv(os.path.join('notebook/data','student.csv'))
+
             df.to_csv(self.Ingestion_data_config.student_data_path,index=False,header=True)
             train_set,test_set=train_test_split(df,test_size=0.2,random_state=42)
             train_set.to_csv(self.Ingestion_data_config.train_data_path,index=False,header=True)
